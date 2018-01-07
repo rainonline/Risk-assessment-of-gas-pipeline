@@ -129,44 +129,12 @@ function figureOut() {
         return;
     }
     score = 0;
-    score1 = 0;
-    score2 = 0;
-    score3 = 0;
-    score4 = 0;
-    score5 = 0;
-    score6 = 0;
-    for (i = 1; i <= 27; i++) {
+    for (i = 1; i <= 108; i++) {
         var n = String(i);
-        score1 += parseFloat($("#" + n).val());
-        console.log("score1= " + score1);
+        score += parseFloat($("#" + n).val());
+        console.log("score= " + score);
     }
-    for (i = 28; i <= 54; i++) {
-        var n = String(i);
-        score2 += parseFloat($("#" + n).val());
-        console.log("score2= " + score2);
-    }
-    for (i = 55; i <= 77; i++) {
-        var n = String(i);
-        score3 += parseFloat($("#" + n).val());
-        console.log("score3= " + score3);
-    }
-    for (i = 78; i <= 98; i++) {
-        var n = String(i);
-        score4 += parseFloat($("#" + n).val());
-        console.log("score4= " + score4);
-    }
-    for (i = 99; i <= 106; i++) {
-        var n = String(i);
-        score5 += parseFloat($("#" + n).val());
-        console.log("score5= " + score5);
-    }
-    for (i = 107; i <= 108; i++) {
-        var n = String(i);
-        score6 += parseFloat($("#" + n).val());
-        console.log("score6= " + score6);
-    }
-    score = (0.53 * score1 + 0.30 * score2 + 0.11 * score3 + 0.06 * score4) / (7 / (score5 / score6));
-    alert(name + "\n管段风险评价结果为：" + "第三方破坏" + score1 + "分；腐蚀" + score2 + "分；设计因素" + score3 + "分；误操作因素" + "分；相对风险综合" + score + "分");
+    alert("你的得分为" + score);
     return;
 
 }
