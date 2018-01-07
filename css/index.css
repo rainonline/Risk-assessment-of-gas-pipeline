@@ -1,0 +1,168 @@
+html,body{
+    height: 100%;
+}
+
+.body{
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+
+}
+
+.page1,.page2,.page3,.page4,.page5{
+    background-color: #f0f0f0;
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+
+.card{
+    margin: 5px 2%;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+.card:hover{
+    background-color: #5FB878;
+}
+
+.head{
+    background-color: #23262E;
+    height: 50px;
+}
+
+.title{
+    font-size: 20px;
+    color: #ffffff;
+    margin-left: 65px;
+    line-height: 50px;
+}
+
+.foot{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+
+    text-align: center;   
+    background-color: black;
+}
+.main{
+    text-align: center;
+}
+
+.button{
+    width: 80%;
+    margin: 10px auto;
+    text-align: center;
+}
+
+.hello{
+    height: 100%;
+    width: 100%;
+}
+
+.index_head{
+    color: #ffffff;
+    width: 80%;
+    margin: auto;
+}
+
+.attention{
+    background-color: #FF5722;
+    max-width: 400px;
+    padding: 10px;
+    margin: 60px auto;
+}
+#inputName{
+    width: 80%;
+    max-width: 400px;
+    min-width: 200px;
+    margin: 40px auto;
+}
+
+.btn-width{
+    width: 80%;
+    max-width: 400px;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.btn-height{
+    height: 40px;
+    font-size: 16px;
+}
+
+.page1-head{
+    background-color: aquamarine;
+    height: 100px;
+    display: none;
+}
+
+.question-height{
+    padding-left: 5%;
+    height: 40px;
+    /*border: 1px solid #000;*/
+    font-size: 15px;
+    line-height: 40px;
+}
+
+.answer-height{
+    height: 40px;
+    /*border: 1px solid #000;*/
+    font-size: 15px;
+}
+
+.select_margin{
+    margin-left: 0px;
+}
+
+.save-button{
+    text-align: center;
+    margin: 30px auto 20px;
+}
+.layui-input, .layui-select, .layui-textarea{
+    height: 40px;
+}
+
+.foot-font{
+    color: #f3f3f3;
+    font-size: 12px;
+    line-height: 50px;
+
+}
+
+.question-title{
+    background-color: red;
+    color: #ffffff;
+    font-size: 18px;
+    margin: 20px 20px 20px 5%;
+    padding: 5px 10px;
+    border-radius: 2px;
+    display: inline-block;
+
+}
+
+#logo{
+    position: absolute;
+    margin:7px 0 7px 20px;
+    width: 36px;
+    height: 36px;
+}
+
+p{
+    line-height: 1.5;
+}
+
+h3{
+    line-height: 40px;
+    text-align: center;
+}
+
+hr{
+    margin: 10px 0px;
+}

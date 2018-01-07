@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>燃气管道风险评价程序</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js"></script>
+    <script type="text/javascript">
+        function f1(param) {
+            for (var i = 1; i <= 4; i++) {
+                var id = document.getElementById("d" + i);
+                id.style.display = "none";
+                if (i === param) {
+                    id.style.display = "block";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="body">
+        <div class="head">
+            <img id="logo" src="img/logo.png">
+            <p class="title">燃气管道风险评价程序</p>
+        </div>
+
+        <!-- 首页 -->
+        <div class="page">
+            <div class="hello" style="display:block">
+                <div class="index_head" style="display:block">
+                    <div class="layui-row card attention">
+                        <div>
+                            <h3>欢迎使用燃气管道风险评价程序
+                                <!--<i class="layui-icon" style="float:right">&#x1007;</i>-->
+                            </h3>
+                            <hr>
+                            <p>本程序的使用说明如下：</p>
+                            <p>请先输入管道名，点击下方的按钮进入主页</p>
+                            <p>在主页点击子项按钮进入评价。完成所有风险因素选择后，点击
+                                <strong>计算生成</strong>按钮生成查看该管段风险评价结果。</p><hr>
+                        </div>
+                        <div id="inputName">
+                            <input type="text" id="name" name="title" lay-verify="title" autocomplete="off" placeholder="请输入管道名" class="layui-input">
+                        </div>
+                        <div class="layui-row button">
+                            <button class="layui-btn btn-width btn-height" onclick="enter()">进入</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="index" style="display:none">
+                <div style="height:80px"></div>
+
+                <div class="main">
+                    <div class="layui-row button">
+                        <button class="layui-btn btn-width btn-height" onclick="show_page1()">第三方破坏</button>
+                    </div>
+                    <div class="layui-row button">
+                        <button class="layui-btn btn-width btn-height" onclick="show_page2()">腐蚀</button>
+                    </div>
+                    <div class="layui-row button">
+                        <button class="layui-btn btn-width btn-height" onclick="show_page3()">设计因素</button>
+                    </div>
+                    <div class="layui-row button">
+                        <button class="layui-btn btn-width btn-height" onclick="show_page4()">误操作</button>
+                    </div>
+                    <div class="layui-row button">
+                        <button class="layui-btn btn-width btn-height" onclick="show_page5()">泄露分/人口分</button>
+                    </div>
+                    <div class="layui-row button">
+                        <button class="layui-btn layui-btn-normal btn-width btn-height" onclick="figureOut()">计算生成</button>
+                    </div>
+                </div>
+
+            </div>
+            <!--第一页-->
+            <div class="page1" style="display:none">
+                <div class="page1-head"></div>
+                <div class="question">
+                    <form class="layui-form" action="">
+                        <!--模板渲染内容-->
+                        <div id="view1"></div>
+                    </form>
+                    <div class="save-button">
+                        <button class="layui-btn btn-width" onclick="back1()">返回首页</button>
+                        <button class="layui-btn layui-btn-normal btn-width" onclick="SaveAndBack1()">保存并返回首页</button>
+                    </div>
+                </div>
+            </div>
+            <!--第二页-->
+            <div class="page2" style="display:none">
+                <div class="page1-head"></div>
+                <div class="question">
+                    <form class="layui-form" action="">
+                        <!--模板渲染内容-->
+                        <div id="view2"></div>
+                    </form>
+                    <div class="save-button">
+                        <button class="layui-btn btn-width" onclick="back2()">返回首页</button>
+                        <button class="layui-btn layui-btn-normal btn-width" onclick="SaveAndBack2()">保存并返回首页</button>
+                    </div>
+                </div>
+            </div>
+            <!--第三页-->
+            <div class="page3" style="display:none">
+                <div class="page1-head"></div>
+                <div class="question">
+                    <form class="layui-form" action="">
+                        <!--模板渲染内容-->
+                        <div id="view3"></div>
+                    </form>
+                    <div class="save-button">
+                        <button class="layui-btn btn-width" onclick="back3()">返回首页</button>
+                        <button class="layui-btn layui-btn-normal btn-width" onclick="SaveAndBack3()">保存并返回首页</button>
+                    </div>
+                </div>
+            </div>
+            <!--第四页-->
+            <div class="page4" style="display:none">
+                <div class="page1-head"></div>
+                <div class="question">
+                    <form class="layui-form" action="">
+                        <!--模板渲染内容-->
+                        <div id="view4"></div>
+                    </form>
+                    <div class="save-button">
+                        <button class="layui-btn btn-width" onclick="back4()">返回首页</button>
+                        <button class="layui-btn layui-btn-normal btn-width" onclick="SaveAndBack4()">保存并返回首页</button>
+                    </div>
+                </div>
+            </div>
+            <!--第五页-->
+            <div class="page5" style="display:none">
+                <div class="page1-head"></div>
+                <div class="question">
+                    <form class="layui-form" action="">
+                        <!--模板渲染内容-->
+                        <div id="view5"></div>
+                    </form>
+                    <div class="save-button">
+                        <button class="layui-btn btn-width" onclick="back5()">返回首页</button>
+                        <button class="layui-btn layui-btn-normal btn-width" onclick="SaveAndBack5()">保存并返回首页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foot">
+            <a class="foot-font">同济大学机械与能源工程学院</a>
+        </div>
+    </div>
+    <script src="layui/layui.js"></script>
+    <script src="js/data.js"></script>
+    <script>
+        //Demo
+        layui.use('form', function () {
+            var form = layui.form;
+
+            //监听提交
+            form.on('submit(formDemo)', function (data) {
+                layer.msg(JSON.stringify(data.field));
+                return false;
+            });
+        });
+    </script>
+    <!--模板-->
+    <script id="section1" type="text/html">
+        {{#  layui.each(d.data1, function(index, item){ }}
+        <div class="question-title">
+            {{ item.title }}
+        </div>
+        {{#  layui.each(item.list, function(index, item){ }}
+        <div class="layui-row card">
+            <div class="layui-col-md3 question-height">
+                <a><b>{{ item.question }}</b></a>
+            </div>
+            <div class="layui-col-md9 answer-height">
+                <div class="layui-form-item">
+                    <div class="layui-input-block select_margin">
+                        <select id="{{ item.id }}" name="city" lay-verify="required">
+                            <option value=""></option>
+                            {{#  layui.each(item.answers, function(index, item){ }}
+                            <option value="{{ item.value }}">{{ item.answer}}</option>
+                            {{#  }); }}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#  }); }}
+        {{#  }); }}
+    </script>
+    <script id="section2" type="text/html">
+        {{#  layui.each(d.data2, function(index, item){ }}
+        <div class="question-title">
+            {{ item.title }}
+        </div>
+        {{#  layui.each(item.list, function(index, item){ }}
+        <div class="layui-row card">
+            <div class="layui-col-md3 question-height">
+                <a><b>{{ item.question }}</b></a>
+            </div>
+            <div class="layui-col-md9 answer-height">
+                <div class="layui-form-item">
+                    <div class="layui-input-block select_margin">
+                        <select id="{{ item.id }}" name="city" lay-verify="required">
+                            <option value=""></option>
+                            {{#  layui.each(item.answers, function(index, item){ }}
+                            <option value="{{ item.value }}">{{ item.answer}}</option>
+                            {{#  }); }}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#  }); }}
+        {{#  }); }}
+    </script>
+    <script id="section3" type="text/html">
+        {{#  layui.each(d.data3, function(index, item){ }}
+        <div class="question-title">
+            {{ item.title }}
+        </div>
+        {{#  layui.each(item.list, function(index, item){ }}
+        <div class="layui-row card">
+            <div class="layui-col-md3 question-height">
+                <a><b>{{ item.question }}</b></a>
+            </div>
+            <div class="layui-col-md9 answer-height">
+                <div class="layui-form-item">
+                    <div class="layui-input-block select_margin">
+                        <select id="{{ item.id }}" name="city" lay-verify="required">
+                            <option value=""></option>
+                            {{#  layui.each(item.answers, function(index, item){ }}
+                            <option value="{{ item.value }}">{{ item.answer}}</option>
+                            {{#  }); }}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#  }); }}
+        {{#  }); }}
+    </script>
+    <script id="section4" type="text/html">
+        {{#  layui.each(d.data4, function(index, item){ }}
+        <div class="question-title">
+            {{ item.title }}
+        </div>
+        {{#  layui.each(item.list, function(index, item){ }}
+        <div class="layui-row card">
+            <div class="layui-col-md3 question-height">
+                <a><b>{{ item.question }}</b></a>
+            </div>
+            <div class="layui-col-md9 answer-height">
+                <div class="layui-form-item">
+                    <div class="layui-input-block select_margin">
+                        <select id="{{ item.id }}" name="city" lay-verify="required">
+                            <option value=""></option>
+                            {{#  layui.each(item.answers, function(index, item){ }}
+                            <option value="{{ item.value }}">{{ item.answer}}</option>
+                            {{#  }); }}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#  }); }}
+        {{#  }); }}
+    </script>
+    <script id="section5" type="text/html">
+        {{#  layui.each(d.data5, function(index, item){ }}
+        <div class="question-title">
+            {{ item.title }}
+        </div>
+        {{#  layui.each(item.list, function(index, item){ }}
+        <div class="layui-row card">
+            <div class="layui-col-md3 question-height">
+                <a><b>{{ item.question }}</b></a>
+            </div>
+            <div class="layui-col-md9 answer-height">
+                <div class="layui-form-item">
+                    <div class="layui-input-block select_margin">
+                        <select id="{{ item.id }}" name="city" lay-verify="required">
+                            <option value=""></option>
+                            {{#  layui.each(item.answers, function(index, item){ }}
+                            <option value="{{ item.value }}">{{ item.answer}}</option>
+                            {{#  }); }}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{#  }); }}
+        {{#  }); }}
+    </script>
+    <!--模板渲染代码-->
+    <script>   
+        layui.use('laytpl', function () {
+            var laytpl = layui.laytpl;
+            var getTpl = section1.innerHTML, view = document.getElementById('view1');
+            laytpl(getTpl).render(data, function (html) {
+                view1.innerHTML = html;
+            });
+            var getTpl = section2.innerHTML, view = document.getElementById('view2');
+            laytpl(getTpl).render(data, function (html) {
+                view2.innerHTML = html;
+            });
+            var getTpl = section3.innerHTML, view = document.getElementById('view3');
+            laytpl(getTpl).render(data, function (html) {
+                view3.innerHTML = html;
+            });
+            var getTpl = section4.innerHTML, view = document.getElementById('view4');
+            laytpl(getTpl).render(data, function (html) {
+                view4.innerHTML = html;
+            });
+            var getTpl = section5.innerHTML, view = document.getElementById('view5');
+            laytpl(getTpl).render(data, function (html) {
+                view5.innerHTML = html;
+            });
+        })
+
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
