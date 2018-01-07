@@ -166,7 +166,7 @@ function figureOut() {
         console.log("score6= " + score6);
     }
     score = (0.53 * score1 + 0.30 * score2 + 0.11 * score3 + 0.06 * score4) / (7 / (score5 / score6));
-    alert(name + "\n管段风险评价结果为：" + "第三方破坏" + score1 + "分；腐蚀" + score2 + "分；设计因素" + score3 + "分；误操作因素" + "分；相对风险综合" + score + "分");
+    alert(name + "\n管段风险评价结果为：" + "第三方破坏" + score1 + "分；腐蚀" + score2 + "分；设计因素" + score3 + "分；误操作因素" + "分；相对风险综合" + score4 + "分");
     return;
 
 }
