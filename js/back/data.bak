@@ -1,3 +1,4 @@
+/*2018/3/18 下午10:33:16*/
 var data =
     {
         "data1-title": "第三方破坏",
@@ -10,32 +11,40 @@ var data =
                         "id": 1,
                         "answers": [
                             {
-                                "answer": "混凝土防护层+混凝土板(管线套管)+土质防护层+警告提示的可见标志",
-                                "value": 5
-                            },
-                            {
-                                "answer": "混凝土防护层+混凝土板(管线套管)+土质防护层",
+                                "answer": "混凝土防护层+混凝土板+管线套管+土质防护层+警告提示的可见标志（水下）",
                                 "value": 4
                             },
                             {
+                                "answer": "混凝土防护层+混凝土板+管线套管+土质防护层",
+                                "value": 3.6
+                            },
+                            {
+                                "answer": "混凝土防护层+混凝土板(管线套管)+土质防护层+警告提示的可见标志",
+                                "value": 3.2
+                            },
+                            {
+                                "answer": "混凝土防护层+混凝土板(管线套管)+土质防护层",
+                                "value": 2.8
+                            },
+                            {
                                 "answer": "混凝土防护层+土质防护层+警告提示的可见标志",
-                                "value": 3
+                                "value": 2.4
                             },
                             {
                                 "answer": "混凝土防护层+土质防护层(公路+碎石+土层+警告+管线套管)",
-                                "value": 2.5
-                            },
-                            {
-                                "answer": "公路沥青防护层+碎石+土质防护层+警告提示的可见标志",
                                 "value": 2
                             },
                             {
+                                "answer": "公路沥青防护层+碎石+土质防护层+警告提示的可见标志",
+                                "value": 1.4
+                            },
+                            {
                                 "answer": "公路沥青防护层+碎石+土质防护层(土质防护层+管线套管)",
-                                "value": 1.5
+                                "value": 0.8
                             },
                             {
                                 "answer": "土质防护层",
-                                "value": 1
+                                "value": 0.4
                             },
                             {
                                 "answer": "无防护层",
@@ -49,15 +58,15 @@ var data =
                         "answers": [
                             {
                                 "answer": "最小埋深>1.6mm",
-                                "value": 8
-                            },
-                            {
-                                "answer": "最小埋深<=1.6mm",
                                 "value": 6
                             },
                             {
+                                "answer": "最小埋深<=1.6mm",
+                                "value": 4.8
+                            },
+                            {
                                 "answer": "最小埋深<=1.4mm",
-                                "value": 4
+                                "value": 3.9
                             },
                             {
                                 "answer": "最小埋深<=1.2mm",
@@ -65,11 +74,11 @@ var data =
                             },
                             {
                                 "answer": "最小埋深<=1.1mm",
-                                "value": 2
+                                "value": 2.4
                             },
                             {
                                 "answer": "最小埋深<=1.0mm",
-                                "value": 1
+                                "value": 1.2
                             },
                             {
                                 "answer": "最小埋深<=0.8mm",
@@ -110,10 +119,40 @@ var data =
                                 "value": 0
                             }
                         ]
-                    },                    
+                    },
+                    {
+                        "question": "管沟情况",
+                        "id": 4,
+                        "answers": [
+                            {
+                                "answer": "同沟线路=1",
+                                "value": 3
+                            },
+                            {
+                                "answer": "同沟线路<=2",
+                                "value": 2.25
+                            },
+                            {
+                                "answer": "同沟线路<=3",
+                                "value": 1.5
+                            },
+                            {
+                                "answer": "同沟线路<=4",
+                                "value": 0.9
+                            },
+                            {
+                                "answer": "同沟线路<=5",
+                                "value": 0.45
+                            },
+                            {
+                                "answer": "同沟线路<=6",
+                                "value": 0
+                            }
+                        ]
+                    },
                     {
                         "question": "地形情况",
-                        "id": 4,
+                        "id": 5,
                         "answers": [
                             {
                                 "answer": "每公里地形起伏数<=2次",
@@ -147,7 +186,7 @@ var data =
                     },
                     {
                         "question": "管道内弯头个数",
-                        "id": 5,
+                        "id": 6,
                         "answers": [
                             {
                                 "answer": "200m内管道弯头个数<=2个",
@@ -186,7 +225,7 @@ var data =
                 "list": [
                     {
                         "question": "车辆活动",
-                        "id": 6,
+                        "id": 7,
                         "answers": [
                             {
                                 "answer": "管道附近几乎没有车辆和船只通行",
@@ -208,7 +247,7 @@ var data =
                     },
                     {
                         "question": "建设活动",
-                        "id": 7,
+                        "id": 8,
                         "answers": [
                             {
                                 "answer": "管道周围无工业建筑活动",
@@ -234,7 +273,7 @@ var data =
                     },
                     {
                         "question": "占压",
-                        "id": 8,
+                        "id": 9,
                         "answers": [
                             {
                                 "answer": "无占压管道现象",
@@ -252,7 +291,7 @@ var data =
                     },
                     {
                         "question": "自然活动",
-                        "id": 9,
+                        "id": 10,
                         "answers": [
                             {
                                 "answer": "管道防灾抗震符合要求，抗震等级高于历史抗震",
@@ -279,7 +318,7 @@ var data =
                 "list": [
                     {
                         "question": "管道防护措施",
-                        "id": 10,
+                        "id": 11,
                         "answers": [
                             {
                                 "answer": "管道防护措施齐全，且都能正常使用",
@@ -301,7 +340,7 @@ var data =
                     },
                     {
                         "question": "抗破坏能力",
-                        "id": 11,
+                        "id": 12,
                         "answers": [
                             {
                                 "answer": "抗破坏能力很强,抗风防水防灾防震效果好,符合建筑设计规范",
@@ -332,19 +371,19 @@ var data =
                 "list": [
                     {
                         "question": "通信方式",
-                        "id": 12,
+                        "id": 13,
                         "answers": [
                             {
                                 "answer": "通信方式满足实际需要",
-                                "value": 4
+                                "value": 3
                             },
                             {
                                 "answer": "通信方式基本满足实际需要",
-                                "value": 2
+                                "value": 2.25
                             },
                             {
                                 "answer": "通信方式不满足实际需要",
-                                "value": 1
+                                "value": 0.75
                             },
                             {
                                 "answer": "无监控和数据采集系统",
@@ -354,15 +393,15 @@ var data =
                     },
                     {
                         "question": "操作时间",
-                        "id": 13,
+                        "id": 14,
                         "answers": [
                             {
                                 "answer": "操作时间很短,效率很高",
-                                "value": 4
+                                "value": 3
                             },
                             {
                                 "answer": "操作时间较短,效率一般",
-                                "value": 2
+                                "value": 1.5
                             },
                             {
                                 "answer": "操作时间很长,效率极低",
@@ -372,15 +411,15 @@ var data =
                     },
                     {
                         "question": "非工作时间通知方式",
-                        "id": 14,
+                        "id": 15,
                         "answers": [
                             {
                                 "answer": "具备先进的通知系统并能正常工作",
-                                "value": 4
+                                "value": 3
                             },
                             {
                                 "answer": "具备一般的通知系统工作可靠性低",
-                                "value": 2
+                                "value": 1.5
                             },
                             {
                                 "answer": "不具备通知系统",
@@ -390,7 +429,7 @@ var data =
                     },
                     {
                         "question": "记录报告可靠性",
-                        "id": 15,
+                        "id": 16,
                         "answers": [
                             {
                                 "answer": "记录报告全部一致",
@@ -398,11 +437,11 @@ var data =
                             },
                             {
                                 "answer": "记录报告基本一致",
-                                "value": 2
+                                "value": 1.8
                             },
                             {
                                 "answer": "记录报告基本不一致",
-                                "value": 1
+                                "value": 0.3
                             },
                             {
                                 "answer": "记录报告完全不一致",
@@ -417,7 +456,7 @@ var data =
                 "list": [
                     {
                         "question": "居民文化层次",
-                        "id": 16,
+                        "id": 17,
                         "answers": [
                             {
                                 "answer": "多数文化层次较高",
@@ -439,7 +478,7 @@ var data =
                     },
                     {
                         "question": "流动人口",
-                        "id": 17,
+                        "id": 18,
                         "answers": [
                             {
                                 "answer": "没有流动人口",
@@ -469,7 +508,7 @@ var data =
                     },
                     {
                         "question": "居民维护意识",
-                        "id": 18,
+                        "id": 19,
                         "answers": [
                             {
                                 "answer": "居民意识很强,遇到燃气管网问题能够发现提出并参与管理",
@@ -495,7 +534,7 @@ var data =
                     },
                     {
                         "question": "宣传活动",
-                        "id": 19,
+                        "id": 20,
                         "answers": [
                             {
                                 "answer": "定期举行天然气管道安全活动,向住户邮寄或发放宣传材料并在媒体进行宣传",
@@ -529,7 +568,7 @@ var data =
                     },
                     {
                         "question": "居民燃气知识了解程度",
-                        "id": 20,
+                        "id": 21,
                         "answers": [
                             {
                                 "answer": "居民很了解天然气管道知识,能够安全使用燃气产品",
@@ -560,23 +599,23 @@ var data =
                 "list": [
                     {
                         "question": "巡线手段",
-                        "id": 21,
+                        "id": 22,
                         "answers": [
                             {
                                 "answer": "远程控制,巡线设备先进,仪器可靠",
-                                "value": 5
-                            },
-                            {
-                                "answer": "驾车巡线,巡线设备先进,仪器可靠",
                                 "value": 4
                             },
                             {
+                                "answer": "驾车巡线,巡线设备先进,仪器可靠",
+                                "value": 3.2
+                            },
+                            {
                                 "answer": "驾车巡线,巡线设备一般,仪器可靠",
-                                "value": 3
+                                "value": 2.4
                             },
                             {
                                 "answer": "步行巡线,巡线设备一般,仪器可靠",
-                                "value": 2
+                                "value": 1.6
                             },
                             {
                                 "answer": "步行巡线,巡线设备一般,仪器不可靠",
@@ -586,11 +625,11 @@ var data =
                     },
                     {
                         "question": "巡线规章",
-                        "id": 22,
+                        "id": 23,
                         "answers": [
                             {
                                 "answer": "规章完善,检测目标明确",
-                                "value": 5
+                                "value": 4
                             },
                             {
                                 "answer": "规章完善,检测目标不全面",
@@ -604,38 +643,60 @@ var data =
                     },
                     {
                         "question": "巡线频率",
-                        "id": 23,
+                        "id": 24,
                         "answers": [
                             {
                                 "answer": "天天巡检",
-                                "value": 10
+                                "value": 7
                             },
                             {
                                 "answer": "每周四次",
-                                "value": 8
+                                "value": 5.95
                             },
                             {
                                 "answer": "每周三次",
-                                "value": 6
+                                "value": 4.9
                             },
                             {
                                 "answer": "每周二次",
-                                "value": 4
+                                "value": 3.5
                             },
                             {
                                 "answer": "每周一次",
-                                "value": 2
+                                "value": 2.8
                             },
                             {
                                 "answer": "一个月一次",
-                                "value": 1
+                                "value": 1.4
                             },
                             {
                                 "answer": "从不巡检",
                                 "value": 0
                             }
                         ]
-                    },                   
+                    },
+                    {
+                        "question": "巡线员责任心",
+                        "id": 25,
+                        "answers": [
+                            {
+                                "answer": "巡线员很认真负责",
+                                "value": 3
+                            },
+                            {
+                                "answer": "巡线员较认真",
+                                "value": 2.25
+                            },
+                            {
+                                "answer": "巡线员一般",
+                                "value": 1.5
+                            },
+                            {
+                                "answer": "巡线员不负责",
+                                "value": 0
+                            }
+                        ]
+                    }
                 ]
             },
             {
@@ -643,7 +704,7 @@ var data =
                 "list": [
                     {
                         "question": "管道用地标识",
-                        "id": 24,
+                        "id": 26,
                         "answers": [
                             {
                                 "answer": "管道与公路铁路沟渠江河穿越处均有标志牌,空中巡检标志牌,十分清晰",
@@ -672,7 +733,42 @@ var data =
                         ]
                     }
                 ]
-            },           
+            },
+            {
+                "title": "人口密度",
+                "list": [
+                    {
+                        "question": "人口密度",
+                        "id": 27,
+                        "answers": [
+                            {
+                                "answer": "无人区或者偶有人区",
+                                "value": 5
+                            },
+                            {
+                                "answer": "住宅数<10户,属于一级地区",
+                                "value": 4
+                            },
+                            {
+                                "answer": "住宅数10-46户,属于二级地区",
+                                "value": 2.5
+                            },
+                            {
+                                "answer": "住宅数大于46户,三级地区",
+                                "value": 1.5
+                            },
+                            {
+                                "answer": "主要商业区和人口聚居地,属于四级地区",
+                                "value": 0.5
+                            },
+                            {
+                                "answer": "一般居民区,交通要道和公共场所,属于四级地区",
+                                "value": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         ],
         "data2-title": "腐蚀",
         "data2": [
@@ -681,7 +777,7 @@ var data =
                 "list": [
                     {
                         "question": "阴保产品质量",
-                        "id": 25,
+                        "id": 28,
                         "answers": [
                             {
                                 "answer": "阴极保护产品质量证明文件完整，进货检验合格",
@@ -702,8 +798,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "阴保安装质量",
-                        "id": 26,
+                        "question": "阴极保护安装质量",
+                        "id": 29,
                         "answers": [
                             {
                                 "answer": "阴极保护系统施工过程进行质量控制，检验结果合格",
@@ -716,8 +812,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "在线检查频率",
-                        "id": 27,
+                        "question": "阴极保护在线检查频率",
+                        "id": 30,
                         "answers": [
                             {
                                 "answer": "优,检查频率和项目认真完全符合标准规范要求",
@@ -738,8 +834,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "在线检查质量",
-                        "id": 28,
+                        "question": "阴保在线检查质量",
+                        "id": 31,
                         "answers": [
                             {
                                 "answer": "在线检查认真，符合要求",
@@ -756,8 +852,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "全面检查频率",
-                        "id": 29,
+                        "question": "阴极保护全面检查频率",
+                        "id": 32,
                         "answers": [
                             {
                                 "answer": "优, 检查频率和项目认真完全符合标准规范要求",
@@ -778,8 +874,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "全面检查质量",
-                        "id": 30,
+                        "question": "阴极保护全面检查质量",
+                        "id": 33,
                         "answers": [
                             {
                                 "answer": "全面检查认真，符合要求",
@@ -801,8 +897,8 @@ var data =
                 "title": "包裹层情况",
                 "list": [
                     {
-                        "question": "制造质量",
-                        "id": 31,
+                        "question": "外防腐制造质量",
+                        "id": 34,
                         "answers": [
                             {
                                 "answer": "外防腐层质量证明文件完整，复验合格",
@@ -823,8 +919,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "施工质量",
-                        "id": 32,
+                        "question": "外防腐施工质量",
+                        "id": 35,
                         "answers": [
                             {
                                 "answer": "涂层施工质量优，针孔检验合格和漏点检验合格",
@@ -845,8 +941,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "缺陷修补",
-                        "id": 33,
+                        "question": "外防腐缺陷修补",
+                        "id": 36,
                         "answers": [
                             {
                                 "answer": "立即证实,并制定进度计划表",
@@ -867,8 +963,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "全面检查频率",
-                        "id": 34,
+                        "question": "外防腐全面检查频率",
+                        "id": 37,
                         "answers": [
                             {
                                 "answer": "优, 检查频率和项目认真完全符合标准规范要求",
@@ -889,8 +985,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "全面检查质量",
-                        "id": 35,
+                        "question": "外防腐全面检查质量",
+                        "id": 38,
                         "answers": [
                             {
                                 "answer": "全面检查认真，符合要求",
@@ -913,7 +1009,7 @@ var data =
                 "list": [
                     {
                         "question": "土壤通气性",
-                        "id": 36,
+                        "id": 39,
                         "answers": [
                             {
                                 "answer": "土壤通气性差",
@@ -931,7 +1027,7 @@ var data =
                     },
                     {
                         "question": "土壤电阻率",
-                        "id": 37,
+                        "id": 40,
                         "answers": [
                             {
                                 "answer": "土壤电阻率>6000欧姆.cm",
@@ -953,7 +1049,7 @@ var data =
                     },
                     {
                         "question": "土壤含水量",
-                        "id": 38,
+                        "id": 41,
                         "answers": [
                             {
                                 "answer": "土壤含水量很低",
@@ -974,26 +1070,52 @@ var data =
                         ]
                     },
                     {
-                        "question": "土壤含盐量",
-                        "id": 39,
+                        "question": "土壤温度",
+                        "id": 42,
                         "answers": [
                             {
-                                "answer": "土壤含盐量很高",
-                                "value": 2
-                            },
-                            {
-                                "answer": "土壤含盐量一般",
+                                "answer": "土壤温度很高",
                                 "value": 1
                             },
                             {
-                                "answer": "土壤含盐量低",
+                                "answer": "土壤温度一般",
+                                "value": 0.5
+                            },
+                            {
+                                "answer": "土壤温度低",
                                 "value": 0
                             }
                         ]
-                    },                 
+                    },
+                    {
+                        "question": "土壤粘土矿物类型",
+                        "id": 43,
+                        "answers": [
+                            {
+                                "answer": "石灰质土,石灰质泥灰土石灰质灰土或者砂土",
+                                "value": 1
+                            },
+                            {
+                                "answer": "壤土,壤质泥灰土或含灰量小于75%的壤质砂土和粘质砂土",
+                                "value": 0.6
+                            },
+                            {
+                                "answer": "腐殖土,粘质泥灰土和粘土",
+                                "value": 0.4
+                            },
+                            {
+                                "answer": "含硫酸盐土壤含烃类化合物土壤",
+                                "value": 0.1
+                            },
+                            {
+                                "answer": "沼泽土,淤泥土,泥炭土",
+                                "value": 0
+                            }
+                        ]
+                    },
                     {
                         "question": "PH值",
-                        "id": 40,
+                        "id": 44,
                         "answers": [
                             {
                                 "answer": "6<PH<8",
@@ -1023,8 +1145,8 @@ var data =
                 "title": "交流电流干扰",
                 "list": [
                     {
-                        "question": "交流电流排流",
-                        "id": 41,
+                        "question": "交流电流干扰",
+                        "id": 45,
                         "answers": [
                             {
                                 "answer": "交流干扰测试与排流频率为每周一次",
@@ -1050,7 +1172,7 @@ var data =
                     },
                     {
                         "question": "地铁系统或输电线路等设施情况",
-                        "id": 42,
+                        "id": 46,
                         "answers": [
                             {
                                 "answer": "管道不受地铁系统或输电线路等设施干扰",
@@ -1073,7 +1195,7 @@ var data =
                 "list": [
                     {
                         "question": "腐蚀环境",
-                        "id": 43,
+                        "id": 47,
                         "answers": [
                             {
                                 "answer": "天然气和土壤的腐蚀性较小",
@@ -1091,15 +1213,15 @@ var data =
                     },
                     {
                         "question": "环境温度变化",
-                        "id": 44,
+                        "id": 48,
                         "answers": [
                             {
                                 "answer": "环境温度变化小",
-                                "value": 3
+                                "value": 4
                             },
                             {
                                 "answer": "环境温度变化一般",
-                                "value": 1.5
+                                "value": 2
                             },
                             {
                                 "answer": "环境温度变化较大",
@@ -1109,11 +1231,11 @@ var data =
                     },
                     {
                         "question": "管材缺陷",
-                        "id": 45,
+                        "id": 49,
                         "answers": [
                             {
                                 "answer": "无管材缺陷",
-                                "value": 3
+                                "value": 2
                             },
                             {
                                 "answer": "管材缺陷较少",
@@ -1136,19 +1258,19 @@ var data =
                 "list": [
                     {
                         "question": "腐蚀检测手段",
-                        "id": 46,
+                        "id": 50,
                         "answers": [
                             {
                                 "answer": "检测手段准确度和灵敏度很高",
-                                "value": 3
-                            },
-                            {
-                                "answer": "检测手段一般",
                                 "value": 2
                             },
                             {
+                                "answer": "检测手段一般",
+                                "value": 1.5
+                            },
+                            {
                                 "answer": "检测手段差",
-                                "value": 1
+                                "value": 0.5
                             },
                             {
                                 "answer": "无检测",
@@ -1158,7 +1280,7 @@ var data =
                     },
                     {
                         "question": "腐蚀检测频率",
-                        "id": 47,
+                        "id": 51,
                         "answers": [
                             {
                                 "answer": "3个月内检测一次",
@@ -1185,7 +1307,29 @@ var data =
                                 "value": 0
                             }
                         ]
-                    },               
+                    },
+                    {
+                        "question": "检测员工素质",
+                        "id": 52,
+                        "answers": [
+                            {
+                                "answer": "员工素质很高,会使用调校,并能维护仪器",
+                                "value": 2
+                            },
+                            {
+                                "answer": "员工素质一般,会使用调校仪器",
+                                "value": 1.5
+                            },
+                            {
+                                "answer": "员工素质很低,对检测仪器的使用不是不了解",
+                                "value": 0.5
+                            },
+                            {
+                                "answer": "员工素质极低,根本不了解检测仪器的使用",
+                                "value": 0
+                            }
+                        ]
+                    }
                 ]
             },
             {
@@ -1193,15 +1337,15 @@ var data =
                 "list": [
                     {
                         "question": "维修人员素质",
-                        "id": 48,
+                        "id": 53,
                         "answers": [
                             {
                                 "answer": "发现并能及时维修,维修记录完整",
-                                "value": 3
+                                "value": 2
                             },
                             {
                                 "answer": "发现并能及时维修,维修记录不完整",
-                                "value": 2
+                                "value": 1.5
                             },
                             {
                                 "answer": "发现能及时维修,维修记录很少",
@@ -1215,7 +1359,7 @@ var data =
                     },
                     {
                         "question": "维修手段",
-                        "id": 49,
+                        "id": 54,
                         "answers": [
                             {
                                 "answer": "维修手段先进,能第一时间内快速准确的完成维修任务",
@@ -1249,7 +1393,7 @@ var data =
                 "list": [
                     {
                         "question": "管道壁厚",
-                        "id": 50,
+                        "id": 55,
                         "answers": [
                             {
                                 "answer": "管道实际壁厚/所需壁厚>1.81 ",
@@ -1279,11 +1423,11 @@ var data =
                     },
                     {
                         "question": "阀门设置",
-                        "id": 51,
+                        "id": 56,
                         "answers": [
                             {
                                 "answer": "阀门设置满足设计规范要求",
-                                "value": 5
+                                "value": 4
                             },
                             {
                                 "answer": "阀门设置不满足设计规范要求 ",
@@ -1292,16 +1436,16 @@ var data =
                         ]
                     },
                     {
-                        "question": "加强措施控制",
-                        "id": 52,
+                        "question": "阀门设置",
+                        "id": 57,
                         "answers": [
                             {
                                 "answer": "采取加强措施满足设计规范的要求或者不需要采用加强措施 ",
-                                "value": 5
+                                "value": 3
                             },
                             {
                                 "answer": "采取加强措施基本满足设计规范的要求 ",
-                                "value": 2.5
+                                "value": 1.5
                             },
                             {
                                 "answer": "采取加强措施不满足设计规范的要求 ",
@@ -1311,15 +1455,15 @@ var data =
                     },
                     {
                         "question": "净距控制",
-                        "id": 53,
+                        "id": 58,
                         "answers": [
                             {
                                 "answer": "水平净距和垂直净距满足设计规范的要求 ",
-                                "value": 5
+                                "value": 4
                             },
                             {
                                 "answer": "水平净距或垂直净距满足设计规范的要求 ",
-                                "value": 2.5
+                                "value": 2
                             },
                             {
                                 "answer": "水平净距和垂直净距不满足设计规范的要求",
@@ -1329,11 +1473,11 @@ var data =
                     },
                     {
                         "question": "锚固件控制",
-                        "id": 54,
+                        "id": 59,
                         "answers": [
                             {
                                 "answer": "锚固件的控制满足设计规范的要求 ",
-                                "value": 5
+                                "value": 4
                             },
                             {
                                 "answer": "锚固件的控制不满足设计规范的要求",
@@ -1348,15 +1492,15 @@ var data =
                 "list": [
                     {
                         "question": "设计压力/MAOP",
-                        "id": 55,
+                        "id": 60,
                         "answers": [
                             {
                                 "answer": "设计压力/MAOP=2.0",
-                                "value": 6
+                                "value": 5
                             },
                             {
                                 "answer": "设计压力/MAOP=1.50-1.74",
-                                "value": 5
+                                "value": 4
                             },
                             {
                                 "answer": "设计压力/MAOP=1.25-1.49",
@@ -1378,15 +1522,15 @@ var data =
                     },
                     {
                         "question": "穿跨越保护措施",
-                        "id": 56,
+                        "id": 61,
                         "answers": [
                             {
                                 "answer": "穿跨越措施合理充分,可以绝大部分情况满足系统安全要求 ",
-                                "value": 6
+                                "value": 4
                             },
                             {
                                 "answer": "穿跨越措施基本合理并满足要求",
-                                "value": 3
+                                "value": 2
                             },
                             {
                                 "answer": "穿跨越措施不满足系统安全要求或无穿跨越保护",
@@ -1396,11 +1540,11 @@ var data =
                     },
                     {
                         "question": "应力控制",
-                        "id": 57,
+                        "id": 62,
                         "answers": [
                             {
                                 "answer": "应力计算校核满足设计规范要求 ",
-                                "value": 6
+                                "value": 3
                             },
                             {
                                 "answer": "应力计算校核不满足设计规范要求或未进行计算校核 ",
@@ -1410,11 +1554,11 @@ var data =
                     },
                     {
                         "question": "敷设线路",
-                        "id": 58,
+                        "id": 63,
                         "answers": [
                             {
                                 "answer": "敷设线路合理，便于维护抢修 ",
-                                "value": 7
+                                "value": 3
                             },
                             {
                                 "answer": "敷设线路不合理，不利于维护抢修，对安全影响很大 ",
@@ -1429,7 +1573,7 @@ var data =
                 "list": [
                     {
                         "question": "防雷设计",
-                        "id": 59,
+                        "id": 64,
                         "answers": [
                             {
                                 "answer": "防直击雷感应雷等，进行接地保护 ",
@@ -1443,7 +1587,7 @@ var data =
                     },
                     {
                         "question": "供电设计",
-                        "id": 60,
+                        "id": 65,
                         "answers": [
                             {
                                 "answer": "阀门室供电配置合理，急用电持续时间长 ",
@@ -1461,7 +1605,7 @@ var data =
                     },
                     {
                         "question": "阀门室间距",
-                        "id": 61,
+                        "id": 66,
                         "answers": [
                             {
                                 "answer": "阀门室间距满足标准规范要求",
@@ -1480,7 +1624,7 @@ var data =
                 "list": [
                     {
                         "question": "试验压力",
-                        "id": 62,
+                        "id": 67,
                         "answers": [
                             {
                                 "answer": "试验压力H>1.41 (H=试验压力值/MAOP) ",
@@ -1510,19 +1654,19 @@ var data =
                     },
                     {
                         "question": "试验持续时间",
-                        "id": 63,
+                        "id": 68,
                         "answers": [
                             {
                                 "answer": "试验持续时间>24小时 ",
-                                "value": 8
+                                "value": 4
                             },
                             {
                                 "answer": "试验持续时间20-24小时 ",
-                                "value": 6
+                                "value": 3.6
                             },
                             {
                                 "answer": "试验持续时间6-24小时",
-                                "value": 4
+                                "value": 3
                             },
                             {
                                 "answer": "试验持续时间10-16小时 ",
@@ -1540,7 +1684,7 @@ var data =
                     },
                     {
                         "question": "距上次试验时间",
-                        "id": 64,
+                        "id": 69,
                         "answers": [
                             {
                                 "answer": "上次试验在2 年前",
@@ -1570,7 +1714,7 @@ var data =
                     },
                     {
                         "question": "试验工程师经验",
-                        "id": 65,
+                        "id": 70,
                         "answers": [
                             {
                                 "answer": "试验工程师经验丰富 ",
@@ -1601,7 +1745,7 @@ var data =
                 "list": [
                     {
                         "question": "不良地质条件",
-                        "id": 66,
+                        "id": 71,
                         "answers": [
                             {
                                 "answer": "土壤不会发生移动",
@@ -1631,7 +1775,7 @@ var data =
                     },
                     {
                         "question": "减缓措施质量",
-                        "id": 67,
+                        "id": 72,
                         "answers": [
                             {
                                 "answer": "减缓措施质量优",
@@ -1653,7 +1797,7 @@ var data =
                     },
                     {
                         "question": "减缓措施频率",
-                        "id": 68,
+                        "id": 73,
                         "answers": [
                             {
                                 "answer": "连续监测",
@@ -1678,7 +1822,88 @@ var data =
                         ]
                     }
                 ]
-            },            
+            },
+            {
+                "title": "设计人员技术",
+                "list": [
+                    {
+                        "question": "设计人员资质",
+                        "id": 74,
+                        "answers": [
+                            {
+                                "answer": "设计人员具备设计资质",
+                                "value": 4
+                            },
+                            {
+                                "answer": "设计人员不具备设计资质 ",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "question": "设计人员经验",
+                        "id": 75,
+                        "answers": [
+                            {
+                                "answer": "设计经验丰富,且设计获得过奖励",
+                                "value": 4
+                            },
+                            {
+                                "answer": "有很多相关设计经验 ",
+                                "value": 3
+                            },
+                            {
+                                "answer": "有一定相关设计经验 ",
+                                "value": 2
+                            },
+                            {
+                                "answer": "学识有限,相关设计经验不足",
+                                "value": 1
+                            },
+                            {
+                                "answer": "没有相关经验 ",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "question": "设计规范选用",
+                        "id": 76,
+                        "answers": [
+                            {
+                                "answer": "管道设计按现行规范进行设计 ",
+                                "value": 6
+                            },
+                            {
+                                "answer": "管道设计按旧版规范进行设计 ",
+                                "value": 3
+                            },
+                            {
+                                "answer": "管道设计未按规范进行设计 ",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "question": "设计文件审查",
+                        "id": 77,
+                        "answers": [
+                            {
+                                "answer": "设计文件审批手续完整 ",
+                                "value": 6
+                            },
+                            {
+                                "answer": "设计文件审批手续不完整 ",
+                                "value": 3
+                            },
+                            {
+                                "answer": "设计文件未经过审批 ",
+                                "value": 0
+                            }
+                        ]
+                    }
+                ]
+            }
         ],
         "data4-title": "误操作",
         "data4": [
@@ -1687,7 +1912,7 @@ var data =
                 "list": [
                     {
                         "question": "灾害识别",
-                        "id": 69,
+                        "id": 78,
                         "answers": [
                             {
                                 "answer": "查看资料,询问专家,彻底了解危险情况",
@@ -1708,8 +1933,8 @@ var data =
                         ]
                     },
                     {
-                        "question": "达到MAOP的可能性",
-                        "id": 70,
+                        "question": "管道压力",
+                        "id": 79,
                         "answers": [
                             {
                                 "answer": "正常操作完全可以允许管道系统达到MAOP",
@@ -1738,12 +1963,12 @@ var data =
                         ]
                     },
                     {
-                        "question": "安全系统",
-                        "id": 71,
+                        "question": "防错装置",
+                        "id": 80,
                         "answers": [
                             {
                                 "answer": "所有关键装置具备防错装置",
-                                "value": 5
+                                "value": 6
                             },
                             {
                                 "answer": "部分关键装置具备防错装置",
@@ -1756,37 +1981,23 @@ var data =
                         ]
                     },
                     {
-                        "question": "设计人员资质",
-                        "id": 72,
+                        "question": "设计软件可靠性",
+                        "id": 81,
                         "answers": [
                             {
-                                "answer": "设计人员具备资质",
-                                "value": 5
+                                "answer": "设计软件很先进,使用可靠性很高",
+                                "value": 4
                             },
                             {
-                                "answer": "设计人员不具备资质",
-                                "value": 0
-                            }
-                        ]
-                    },
-                    {
-                        "question": "设计人员经验",
-                        "id": 73,
-                        "answers": [
-                            {
-                                "answer": "设计经验丰富,且设计获得过奖励",
-                                "value": 5
+                                "answer": "设计软件符合要求,使用可靠性较高",
+                                "value": 2
                             },
                             {
-                                "answer": "有一定相关设计经验",
-                                "value": 3
-                            }, 
+                                "answer": "设计软件已经过时,软件可靠性不高,不符合管道的运行要求",
+                                "value": 0.8
+                            },
                             {
-                                "answer": "学识有限,相关设计经验不足",
-                                "value": 1
-                            },                               
-                            {
-                                "answer": "设计人员不具备经验",
+                                "answer": "设计软件不可用或未有软件 ",
                                 "value": 0
                             }
                         ]
@@ -1798,7 +2009,7 @@ var data =
                 "list": [
                     {
                         "question": "安装单位素质",
-                        "id": 74,
+                        "id": 82,
                         "answers": [
                             {
                                 "answer": "安装单位具备安装资质",
@@ -1812,7 +2023,7 @@ var data =
                     },
                     {
                         "question": "材料误用",
-                        "id": 75,
+                        "id": 83,
                         "answers": [
                             {
                                 "answer": "核实材料的可靠性 ",
@@ -1825,24 +2036,60 @@ var data =
                         ]
                     },
                     {
-                        "question": "施工监督验收",
-                        "id": 76,
+                        "question": "回填控制",
+                        "id": 84,
                         "answers": [
                             {
-                                "answer": "专业监理公司傍站式监督，有验收",
-                                "value": 5
+                                "answer": "回填土质量和工艺满足标准规范的要求",
+                                "value": 8
                             },
                             {
-                                "answer": "有专业监理公司一般监督，有验收",
+                                "answer": "未对回填土质量或工艺进行要求",
                                 "value": 4
                             },
                             {
-                                "answer": "有施工监督,监督人员专业，有验收",
+                                "answer": "未对回填土质量和工艺进行要求",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "question": "连接检测",
+                        "id": 85,
+                        "answers": [
+                            {
+                                "answer": "连接检测合格，检测单位人员具备检测资质",
+                                "value": 2
+                            },
+                            {
+                                "answer": "连接检测合格，检测单位人员不具备检测资质",
+                                "value": 1
+                            },
+                            {
+                                "answer": "连接检测不合格，检测单位人员不具备检测资质 ",
+                                "value": 0
+                            }
+                        ]
+                    },
+                    {
+                        "question": "施工监督验收",
+                        "id": 86,
+                        "answers": [
+                            {
+                                "answer": "专业监理公司傍站式监督，有验收",
                                 "value": 3
                             },
                             {
+                                "answer": "有专业监理公司一般监督，有验收",
+                                "value": 2.4
+                            },
+                            {
+                                "answer": "有施工监督,监督人员专业，有验收",
+                                "value": 1.8
+                            },
+                            {
                                 "answer": "有施工监督,但监督人员不专业，无验收 ",
-                                "value": 2
+                                "value": 1.2
                             },
                             {
                                 "answer": "无施工监督验收",
@@ -1851,38 +2098,38 @@ var data =
                         ]
                     },
                     {
-                        "question": "施工管理措施",
-                        "id": 77,
+                        "question": "施工人员培训",
+                        "id": 87,
                         "answers": [
                             {
-                                "answer": "有详细的施工管理措施，管理计划合理",
-                                "value": 5
+                                "answer": "有详细的施工人员培训计划,施工人员定期培训,培训周期合理",
+                                "value": 4
                             },
                             {
-                                "answer": "有详细的施工管理措施,但培训计划周期不合理",
+                                "answer": "有详细的施工人员培训计划,但培训计划周期不合理",
                                 "value": 3
                             },
                             {
-                                "answer": "有过施工管理措施,但无具体计划",
+                                "answer": "有过施工人员培训,但无具体计划 ",
                                 "value": 1
                             },
                             {
-                                "answer": "无施工管理措施",
+                                "answer": "无施工人员培训计划 ",
                                 "value": 0
                             }
                         ]
                     },
                     {
                         "question": "施工人员素质",
-                        "id": 78,
+                        "id": 88,
                         "answers": [
                             {
                                 "answer": "有相关工作经验,且工作成绩出色 ",
-                                "value": 5
+                                "value": 3
                             },
                             {
                                 "answer": "有相关工作经验",
-                                "value": 2.5
+                                "value": 1.5
                             },
                             {
                                 "answer": "无相关工作经验 ",
@@ -1897,7 +2144,7 @@ var data =
                 "list": [
                     {
                         "question": "工艺过程",
-                        "id": 79,
+                        "id": 89,
                         "answers": [
                             {
                                 "answer": "设备操作,保养和仪器标定规程完善且得到严格遵守",
@@ -1915,7 +2162,7 @@ var data =
                     },
                     {
                         "question": "通讯",
-                        "id": 80,
+                        "id": 90,
                         "answers": [
                             {
                                 "answer": "各站之间配有专有通讯工具 ",
@@ -1933,7 +2180,7 @@ var data =
                     },
                     {
                         "question": "运行检查",
-                        "id": 81,
+                        "id": 91,
                         "answers": [
                             {
                                 "answer": "运行检查100%有效 ",
@@ -1959,7 +2206,7 @@ var data =
                     },
                     {
                         "question": "运行培训",
-                        "id": 82,
+                        "id": 92,
                         "answers": [
                             {
                                 "answer": "运行培训既科学且严格,内容全面,时间充分 ",
@@ -1981,7 +2228,7 @@ var data =
                     },
                     {
                         "question": "运行监督",
-                        "id": 83,
+                        "id": 93,
                         "answers": [
                             {
                                 "answer": "有运营监督,监督合格",
@@ -2008,7 +2255,7 @@ var data =
                 "list": [
                     {
                         "question": "维护规程",
-                        "id": 84,
+                        "id": 94,
                         "answers": [
                             {
                                 "answer": "维护规程严格,维护记录保存完好",
@@ -2030,7 +2277,7 @@ var data =
                     },
                     {
                         "question": "维护质量",
-                        "id": 85,
+                        "id": 95,
                         "answers": [
                             {
                                 "answer": "维护任务完成很好，均符合要求 ",
@@ -2048,7 +2295,7 @@ var data =
                     },
                     {
                         "question": "维护频率",
-                        "id": 86,
+                        "id": 96,
                         "answers": [
                             {
                                 "answer": "定期维护,周期短半年以内 ",
@@ -2074,7 +2321,7 @@ var data =
                     },
                     {
                         "question": "维护人员培训",
-                        "id": 87,
+                        "id": 97,
                         "answers": [
                             {
                                 "answer": "有详细的维护人员培训计划,维护人员定期培训,培训周期合理",
@@ -2096,7 +2343,7 @@ var data =
                     },
                     {
                         "question": "维护人员素质",
-                        "id": 88,
+                        "id": 98,
                         "answers": [
                             {
                                 "answer": "维护工作人员素质好 ",
@@ -2122,7 +2369,7 @@ var data =
                 "list": [
                     {
                         "question": "泄漏截面积",
-                        "id": 89,
+                        "id": 99,
                         "answers": [
                             {
                                 "answer": "未来短时间内可预期的损害 ",
@@ -2148,7 +2395,7 @@ var data =
                     },
                     {
                         "question": "压力因子",
-                        "id": 90,
+                        "id": 100,
                         "answers": [
                             {
                                 "answer": "0-350 kPa ",
@@ -2171,7 +2418,7 @@ var data =
                 "list": [
                     {
                         "question": "发现情况",
-                        "id": 91,
+                        "id": 101,
                         "answers": [
                             {
                                 "answer": "天然气泄露后便能及时发现",
@@ -2197,7 +2444,7 @@ var data =
                     },
                     {
                         "question": "加臭情况",
-                        "id": 92,
+                        "id": 102,
                         "answers": [
                             {
                                 "answer": "天然气中添加的臭气在安全的低浓度下足以被闻出 ",
@@ -2215,7 +2462,7 @@ var data =
                     },
                     {
                         "question": "应急反应性",
-                        "id": 93,
+                        "id": 103,
                         "answers": [
                             {
                                 "answer": "能够处理且处理有条理,处理设备,人员专业，及时控制现场 ",
@@ -2242,7 +2489,7 @@ var data =
                 "list": [
                     {
                         "question": "事故场地情况",
-                        "id": 94,
+                        "id": 104,
                         "answers": [
                             {
                                 "answer": "情况良好能满足现场的灭火和救援工作 ",
@@ -2260,7 +2507,7 @@ var data =
                     },
                     {
                         "question": "连锁事故可能性",
-                        "id": 95,
+                        "id": 105,
                         "answers": [
                             {
                                 "answer": "管道事故周围易燃易爆物很少 ",
@@ -2278,7 +2525,7 @@ var data =
                     },
                     {
                         "question": "自然情况",
-                        "id": 96,
+                        "id": 106,
                         "answers": [
                             {
                                 "answer": "地形条件好气体容易扩散,风有利于气体扩散",
@@ -2301,7 +2548,7 @@ var data =
                 "list": [
                     {
                         "question": "人口平均密度",
-                        "id": 97,
+                        "id": 107,
                         "answers": [
                             {
                                 "answer": "主要商业区和人口聚居地,属于四级地区",
@@ -2331,7 +2578,7 @@ var data =
                     },
                     {
                         "question": "人员流动性",
-                        "id": 98,
+                        "id": 108,
                         "answers": [
                             {
                                 "answer": "人员流动性强,经常有大量外来人口 ",
