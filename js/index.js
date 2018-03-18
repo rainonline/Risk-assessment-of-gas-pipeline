@@ -2,7 +2,7 @@ function enter() {
     var name = $.trim($('#name').val());
     //console.log("输入框内容: " + name);
     if (is_empty($.trim(name)) || name == "输入框内容") {
-        alert("请先输入管道名");
+        layer.msg("请先输入管道名");
         return;
     }
 
@@ -38,7 +38,7 @@ function show_page5() {
 
 function SaveAndBack1() {
     if (!all_work(1, 24)) {
-        alert('本页问题没有全部完成，请完成后保存');
+        layer.msg('本页问题没有全部完成，请完成后保存');
         return;
     }
     //console.log(checkValue);
@@ -49,7 +49,7 @@ function SaveAndBack1() {
 
 function SaveAndBack2() {
     if (!all_work(25, 49)) {
-        alert('本页问题没有全部完成，请完成后保存');
+        layer.msg('本页问题没有全部完成，请完成后保存');
         return;
     }
     $(".page2").hide();
@@ -59,7 +59,7 @@ function SaveAndBack2() {
 
 function SaveAndBack3() {
     if (!all_work(50, 68)) {
-        alert('本页问题没有全部完成，请完成后保存');
+        layer.msg('本页问题没有全部完成，请完成后保存');
         return;
     }
     $(".page3").hide();
@@ -69,7 +69,7 @@ function SaveAndBack3() {
 
 function SaveAndBack4() {
     if (!all_work(69, 88)) {
-        alert('本页问题没有全部完成，请完成后保存');
+        layer.msg('本页问题没有全部完成，请完成后保存');
         return;
     }
     $(".page4").hide();
@@ -79,7 +79,7 @@ function SaveAndBack4() {
 
 function SaveAndBack5() {
     if (!all_work(89, 98)) {
-        alert('本页问题没有全部完成，请完成后保存');
+        layer.msg('本页问题没有全部完成，请完成后保存');
         return;
     }
     $(".page5").hide();
@@ -121,11 +121,11 @@ function figureOut() {
     var name = $.trim($('#name').val());
     //console.log("输入框内容: " + name);
     if (is_empty($.trim(name)) || name == "输入框内容") {
-        alert("请先输入管道名");
+        layer.msg("请先输入管道名");
         return;
     }
     if (!all_work(1, 98)) {
-        alert('问题没有全部完成');
+        layer.msg('问题没有全部完成');
         return;
     }
     score = 0;
@@ -138,32 +138,26 @@ function figureOut() {
     for (i = 1; i <= 24; i++) {
         var n = String(i);
         score1 += parseFloat($("#" + n).val());
-        console.log("score1= " + score1);
     }
     for (i = 25; i <= 49; i++) {
         var n = String(i);
         score2 += parseFloat($("#" + n).val());
-        console.log("score2= " + score2);
     }
     for (i = 50; i <= 68; i++) {
         var n = String(i);
         score3 += parseFloat($("#" + n).val());
-        console.log("score3= " + score3);
     }
     for (i = 69; i <= 88; i++) {
         var n = String(i);
         score4 += parseFloat($("#" + n).val());
-        console.log("score4= " + score4);
     }
     for (i = 89; i <= 96; i++) {
         var n = String(i);
         score5 += parseFloat($("#" + n).val());
-        console.log("score5= " + score5);
     }
     for (i = 97; i <= 98; i++) {
         var n = String(i);
         score6 += parseFloat($("#" + n).val());
-        console.log("score6= " + score6);
     }
     score = (0.53 * score1 + 0.30 * score2 + 0.11 * score3 + 0.06 * score4) / (7 / (score5 / score6));
     //alert(name + "\n管段风险评价结果为：" + "第三方破坏" + score1 + "分；腐蚀" + score2 + "分；设计因素" + score3 + "分；误操作因素" + score4 + "分；相对风险综合" + score + "分");
@@ -201,8 +195,8 @@ function all_work(a, b) {
         //alert(jQuery.type(i));
         var n = String(i);
         var checkValue = $("#" + n).val();
-        console.log(i);
-        console.log(checkValue);
+        //console.log(i);
+        //console.log(checkValue);
         if (is_empty(checkValue)) {
             return false;
         }
@@ -211,18 +205,21 @@ function all_work(a, b) {
 }
 
 /**
- * 为所有的题生成分数
- * 
+ * 进入模拟模式
  */
 function work_all(a, b) {
     for (i = a; i <= b; i++) {
         var n = String(i);
-        $("#" + n).val(2);
+        $("#" + n).get(0).selectedIndex = 2;;
+        //console.log($("#" + n).val());
     }
-    alert("以屏蔽完成检测");
+    //alert("已载入模拟数据，可直接点击计算");
+
+    $("#moni").show();
+    layer.msg("已载入模拟数据，可直接点击计算");
 }
 
-function output(score, score1, score2, score3, score4, name) {
+function output(score, score1, score2, score3, score4, name = '默认') {
     layui.use('layer', function () {
         var layer = layui.layer;
         layer.open({
@@ -231,7 +228,7 @@ function output(score, score1, score2, score3, score4, name) {
             closeBtn: 0,
             shadeClose: true,
             skin: 'layui-layer-lanlayui-layer-molv',
-            content: '<div style="margin:20px;"><table class="layui-table"><colgroup><col><col></colgroup><thead><tr><th>项目</th><th>分数</th></tr></thead><tbody><tr><td>第三方破坏</td><td>'+score1+'</td></tr><tr><td>腐蚀</td><td>'+score2+'</td></tr><tr><td>设计因素</td><td>'+score3+'</td></tr><tr><td>误操作因素</td><td>'+score4+'</td></tr><tr><td>相对风险综合</td><td>'+score+'</td></tr></tbody></table></div>'
-          });
+            content: '<div style="margin:10px;"><table class="layui-table"><colgroup><col><col></colgroup><thead><tr><th>项目</th><th>分数</th></tr></thead><tbody><tr><td>第三方破坏</td><td>' + score1 + '</td></tr><tr><td>腐蚀</td><td>' + score2 + '</td></tr><tr><td>设计因素</td><td>' + score3 + '</td></tr><tr><td>误操作因素</td><td>' + score4 + '</td></tr><tr><td>相对风险综合</td><td>' + score + '</td></tr></tbody></table></div>'
+        });
     });
 }

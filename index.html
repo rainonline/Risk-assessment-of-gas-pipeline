@@ -54,7 +54,11 @@
 
             </div>
             <div class="index" style="display:none">
-                <div style="height:80px"></div>
+                <div style="height:80px;text-align: center;">
+                    <div id="moni" style="display:none; height:60px;width: 100%;background-color: #ff5722;color: #fff;">
+                        <p style="line-height:60px">已经入模拟模式，此模式下计算结果不为真，仅供体验软件流程用</p>
+                    </div>
+                </div>
 
                 <div class="main">
                     <div class="layui-row button">
@@ -75,8 +79,8 @@
                     <div class="layui-row button">
                         <button class="layui-btn layui-btn-normal btn-width btn-height" onclick="figureOut()">计算生成</button>
                     </div>
-                    <div class="layui-row button" style="display:none">
-                        <button class="layui-btn layui-btn-normal btn-width btn-height" onclick="output()">测试模式</button>
+                    <div class="layui-row button" style="display:block">
+                        <button class="layui-btn layui-btn-danger btn-width btn-height" onclick="work_all(1,98)">模拟模式</button>
                     </div style="">
                 </div>
 
