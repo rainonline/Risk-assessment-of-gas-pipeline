@@ -1,0 +1,24 @@
+{
+  "name": "risk-assessment-of-gas-pipeline",
+  "version": "1.0.0",
+  "description": "Gas Pipeline Risk Assessment Tool - Vue 3 Version",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": ["vue3", "risk-assessment", "gas-pipeline"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@element-plus/icons-vue": "^2.3.2",
+    "@vitejs/plugin-vue": "^6.0.1",
+    "element-plus": "^2.10.5",
+    "pinia": "^3.0.3",
+    "vite": "^7.1.0",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  }
+}
