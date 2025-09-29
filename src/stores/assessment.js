@@ -21,7 +21,8 @@ export const useAssessmentStore = defineStore('assessment', {
     },
     
     getAnswerById: (state) => (id) => {
-      return state.answers[id] || null
+      // Return the stored answer even if it's falsy (e.g., 0).
+      return typeof state.answers[id] !== 'undefined' ? state.answers[id] : null
     }
   },
 
